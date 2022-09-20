@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Easy Digital Downloads - Software License Renewal
  * Description: Easy way to renew license for the product on Easy Digital Downloads.
- * Plugin URI:  https://wpsmartpay.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
+ * Plugin URI:  https://wpsmartpay.com
  * Tags: edd, edd-licensing, edd-software-licensing, edd-software-license-renewal
  * Version:     1.0.0
  * Author:      WPSmartPay
