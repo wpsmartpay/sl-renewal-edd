@@ -22,6 +22,7 @@ add_action('edd_order_history_row_end', 'sl_renewal_edd_add_renewal_action_link_
 
 function sl_renewal_edd_add_renewal_action_header_purchase_history_page(): void
 {
+    if (!function_exists('edd_software_licensing')) return;
     echo '<th class="edd_license_key">' . __( 'Actions', 'edd-sl-renewal' ) . '</th>';
 }
 
@@ -42,7 +43,7 @@ function sl_renewal_edd_add_renewal_action_link_purchase_history_page($order): v
            data-license-id="<?php echo
            $license->ID; ?>" data-nonce="<?php echo wp_create_nonce( 'edd_renew_license_nonce' ); ?>">
             <?php esc_html_e( 'Renew', 'edd-sl-renewal' ); ?> -#
-            <?php echo esc_html($licensing->get_license_download_display_name($license)) ?>
+            <?php echo strip_tags($licensing->get_license_download_display_name($license)) ?>
         </a>
     <?php endforeach; ?>
     <?php
